@@ -1,1 +1,51 @@
-<h1>I am a fucking ADMIN!!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location Info – Incredible India</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "locatio", media: "all" %>
+</head>
+
+<body class="page-index">
+
+  <nav class="top-right-nav">
+    <% if user_signed_in? %>
+      <span class="welcome-user">Welcome, <%= current_user.email %></span>
+      <%= button_to "Logout", destroy_user_session_path,
+                    method: :delete,
+                    data: { no_turbolink: true },
+                    class: "login-link" %>
+    <% else %>
+      <%= link_to "Log in", new_user_session_path,
+                  class: "login-link" %>
+    <% end %>
+  </nav>
+
+  <div class="incredible-india-header">
+    <div class="incredible-text">INCREDIBLE</div>
+    <div class="india-text">INDIA</div>
+    <div class="chakra-decoration"></div>
+  </div>
+
+  <div class="locations-page-content">
+    <div class="dropdown-wrapper">
+      <label for="location-select" class="dropdown-label">Select Location:</label>
+      <select id="location-select" class="location-select">
+        <option value="" disabled selected>Choose a location</option>
+        <option value="all">All Locations</option>
+        <% Location.order(:name).each do |loc| %>
+          <option value="<%= loc.id %>"><%= loc.name %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="info-display">
+      <h2>Location Information</h2>
+      <p><strong>Distress Calls:</strong> <span class="distress-calls"></span></p>
+      <p><strong>Help Requests:</strong> <span class="help-requests"></span></p>
+    </div>
+  </div>
+
+</body>
+</html>

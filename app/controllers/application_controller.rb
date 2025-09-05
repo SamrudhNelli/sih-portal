@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   allow_browser versions: :modern
 
   protect_from_forgery with: :exception
-  before_action :authenticate_user!
   before_action :configure_permitted_params, if: :devise_controller?
 
   protected

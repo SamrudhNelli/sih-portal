@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+/* Background & Overlay */
+body.page-index {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Lora', serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+body.admin
+{
+    background: url('/wallpaper.jpg') center/cover no-repeat fixed;
+}
+
+/* Overlay */
+body.page-index::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.11), rgba(19,136,8,0.09));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Top-right nav */
+.top-right-nav {
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  z-index: 20;
+}
+.top-right-nav .login-link {
+  color: #fff;
+  background: #2563EB;
+  padding: 9px 23px;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(31,38,135,0.11);
+  transition: background 0.18s;
+}
+.top-right-nav .login-link:hover,
+.top-right-nav .login-link:focus {
+  background: #FF9900;
+  color: #fff;
+  box-shadow: 0 6px 22px rgba(255,153,0,0.18);
+}
+
+/* Header */
+.incredible-india-header {
+  position: relative;
+  z-index: 2;
+  margin: 65px auto 0;
+  text-align: center;
+}
+.incredible-text {
+  color: #FF9900;
+  font-weight: 400;
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.india-text {
+  color: #138808;
+  font-weight: 700;
+  font-size: 3.3rem;
+  letter-spacing: 2.5px;
+  margin: 0 0 1.2rem 0;
+}
+.chakra-decoration {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #000080;
+  border-radius: 50%;
+  margin: 0 auto 1.3rem;
+  position: relative;
+}
+.chakra-decoration::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 19px; height: 19px;
+  border: 2px solid #000080;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* Main content */
+.locations-page-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto 4rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255,255,255,0.87);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(19,136,8,0.2);
+  text-align: center;
+}
+
+/* Dropdown */
+.dropdown-wrapper {
+  margin-bottom: 2rem;
+}
+.dropdown-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #138808;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.location-select {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid #2563EB;
+  border-radius: 18px;
+  background: #fff;
+  color: #276e36;
+  box-shadow: 0 3px 8px rgba(37,99,235,0.14);
+  min-width: 240px;
+  transition: border-color 0.2s ease;
+}
+.location-select:hover,
+.location-select:focus {
+  border-color: #FF9900;
+  outline: none;
+}
+
+/* Info display */
+.info-display h2 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #138808;
+  letter-spacing: 1.5px;
+}
+.info-display p {
+  margin: 0.5rem 0;
+  font-size: 1.15rem;
+  color: #1a2a17;
+}
+.info-display strong {
+  color: #246621;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .incredible-text { font-size: 1.5rem; }
+  .india-text { font-size: 2rem; }
+  .chakra-decoration { width: 23px; height: 23px; }
+  .chakra-decoration::before { width: 12px; height: 12px; }
+  .locations-page-content {
+    margin: 1.5rem 1rem 3rem;
+    padding: 1rem 1.5rem;
+  }
+  .dropdown-label { font-size: 1.1rem; }
+  .location-select { font-size: 1rem; min-width: 100%; }
+  .info-display h2 { font-size: 1.4rem; }
+  .info-display p { font-size: 1rem; }
+}

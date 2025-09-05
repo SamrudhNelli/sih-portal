@@ -1,9 +1,15 @@
 module Admin
   class BaseController < ApplicationController
-    before_action :check_if_admin
+    include Devise::Controllers::Helpers
+
+    before_action :check_admin
+
     private
-    def check_if_admin
-      redirect_to root_path unless current_user.admin?
+
+    def check_admin
+      if user_signed_in?
+        redirect_to pages_path unless current_user.admin?
+      end
     end
   end
 end

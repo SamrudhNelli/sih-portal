@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body.page-login,
+body.page-index {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('/wallpaper.jpg') center/cover no-repeat fixed;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: flex-start;               /* Start at top for spacing */
+  justify-content: center;
+}
+
+body.page-login::before,
+body.page-index::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.09), rgba(19,136,8,0.09));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Small, centered login box */
+.login-container {
+  position: relative;
+  z-index: 2;
+  max-width: 295px;     /* even smaller */
+  width: 92vw;
+  margin: 60px auto 0 auto; /* space from top of screen */
+  background: rgba(255,255,255,0.42);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px 0 rgba(31,38,135,0.16);
+  padding: 1.25rem 1rem 1rem 1rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.incredible-india-header {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.incredible-text {
+  font-family: 'Lora', serif;
+  color: #FF9900;
+  font-weight: 400;
+  font-size: 1.07rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.india-text {
+  font-family: 'Lora', serif;
+  color: #138808;
+  font-weight: 700;
+  font-size: 1.53rem;
+  margin: 0 0 0.27rem 0;
+  letter-spacing: 1.5px;
+}
+.chakra-decoration {
+  width: 19px;
+  height: 19px;
+  border: 2px solid #000080;
+  border-radius: 50%;
+  margin: 0.2rem auto 0.3rem auto;
+  position: relative;
+}
+.chakra-decoration::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 7.5px; height: 7.5px;
+  border: 1px solid #000080;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.page-login h1,
+.page-index h1 {
+  font-family: 'Lora', serif;
+  font-size: 1.32rem;
+  font-weight: 400;
+  margin: 0 0 0.7rem 0;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.alert {
+  padding: 0.45rem;
+  margin-bottom: 0.7rem;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 0.89rem;
+  font-family: 'Open Sans', sans-serif;
+  background: rgba(220,53,69,0.07);
+  border: 1px solid rgba(220,53,69,0.15);
+  color: #c72929;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.72rem;
+}
+.field label {
+  color: #415267;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.24rem;
+  font-family: 'Open Sans', sans-serif;
+}
+.field input {
+  height: 2.0rem;
+  padding: 0 0.7rem;
+  border-radius: 6px;
+  border: 1.15px solid #d4dde7;
+  background: rgba(255,255,255,0.92);
+  font-size: 0.99rem;
+  font-family: 'Open Sans', sans-serif;
+}
+.field input:focus {
+  border-color: #FF9900;
+  outline: none;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  font-size: 0.89rem;
+}
+.actions {
+  margin-bottom: 0.7rem;
+}
+
+.btn-login,
+input[type="submit"],
+button[type="submit"] {
+  width: 100%;
+  background: #2563eb;
+  color: #fff;
+  padding: 0.59rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.97rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin-top: 0.38rem;
+  margin-bottom: 0.2rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  box-shadow: 0 2px 8px 0 rgba(37,99,235,0.04);
+}
+.btn-login:hover,
+input[type="submit"]:hover {
+  background: #1746ad;
+}
+
+.links {
+  text-align: center;
+  margin-bottom: 0.4rem;
+  font-size: 0.90rem;
+}
+.links a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 3px;
+}
+.links a:hover {
+  color: #FF9900;
+  text-decoration: underline;
+}
+
+.admin-note {
+  margin-top: 0.7rem;
+  font-size: 0.74rem;
+  color: #546378;
+  text-align: center;
+  font-style: italic;
+  padding-top: 0.2rem;
+  font-family: 'Open Sans',sans-serif;
+  width: 100%;
+}
+
+.forgot-link {
+  display: block;
+  margin-top: 0.33rem;
+  color: #444;
+  text-align: center;
+  font-size: 0.93rem;
+  text-decoration: none;
+}
+.forgot-link:hover {
+  color: #FF9900;
+}
+
+.input-container {
+  position: relative;
+}
+.toggle-password {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.96rem;
+  color: #FF9900;
+  transition: color 0.2s;
+}
+.toggle-password:hover {
+  color: #138808;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    max-width: 97vw;
+    padding: 0.7rem 0.3rem 0.4rem 0.3rem;
+  }
+  .field input, .btn-login, input[type="submit"] {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+}
+
+.top-left-nav {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  z-index: 99;
+  pointer-events: auto;
+}
+.top-left-nav .nav-link {
+  color: #fff;
+  background: rgba(34, 34, 34, 0.38);
+  padding: 7px 16px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  outline: none;
+  display: inline-block;
+  letter-spacing: 1px;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.top-left-nav .nav-link:hover,
+.top-left-nav .nav-link:focus {
+  background: #FF9900;
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(255,153,0,0.12);
+}
+@media (max-width: 480px) {
+  .top-left-nav {
+    top: 8px;
+    left: 8px;
+  }
+  .top-left-nav .nav-link {
+    padding: 5px 11px;
+    font-size: 0.96rem;
+  }
+}

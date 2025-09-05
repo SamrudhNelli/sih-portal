@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Incredible India – Log in</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "pages", media: "all" %>
+    <%# <%= javascript_include_tag "pages" %>
+  </head>
+
+  <body class="page-login">
+    <nav class="top-left-nav">
+    <%= link_to "← Home", pages_path, class: "nav-link" %>
+    </nav>
+    <div class="login-container">
+      <div class="incredible-india-header">
+        <h2 class="incredible-text">INCREDIBLE</h2>
+        <h1 class="india-text">INDIA</h1>
+        <div class="chakra-decoration"></div>
+      </div>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

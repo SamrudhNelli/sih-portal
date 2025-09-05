@@ -1,1 +1,38 @@
-<h1>Hola</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Incredible India</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "index", media: "all" %>
+  </head>
+  <body class="page-index">
+  <nav class="top-right-nav">
+    <% if user_signed_in? %>
+        <span class="welcome-user">
+        Welcome, <%= current_user.email %>
+        </span>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { no_turbolink: true }, class: "login-link" %>
+    <% else %>
+        <%= link_to "Log in", new_user_session_path, class: "login-link" %>
+    <% end %>
+  </nav>
+  <div class="incredible-india-header">
+    <div class="incredible-text">INCREDIBLE</div>
+    <div class="india-text">INDIA</div>
+    <div class="chakra-decoration"></div>
+  </div>
+  <% if user_signed_in? && current_user.location %>
+  <div class="center-flex">
+    <div class="location-block">
+      Your location : <%= "#{current_user.location.name} (#{current_user.location.latitude}, #{current_user.location.longitude})" %>
+    </div>
+    <div class="action-buttons">
+      <button class="main-btn">Urgent help!!</button>
+      <button class="main-btn">Need info</button>
+    </div>
+  </div>
+  <% end %>
+</body>
+
+</html>
