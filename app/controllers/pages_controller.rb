@@ -6,5 +6,7 @@ class PagesController < ApplicationController
     end
   end
   end
+  def new
+  end
   private
 end

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+body.page-kyc {
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Lora', serif;
+  background: url('/wallpaper.jpg') center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  color: #276e36;
+}
+
+body.page-kyc::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.11), rgba(19,136,8,0.09));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Top-left home button */
+
+.top-left-nav {
+  position: fixed;
+  top: 24px;
+  left: 28px;
+  z-index: 20;
+}
+
+.home-btn {
+  background: #2563EB;
+  color: white;
+  padding: 10px 22px;
+  font-weight: 700;
+  border-radius: 32px;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  box-shadow: 0 4px 18px rgba(31, 38, 135, 0.15);
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.home-btn:hover,
+.home-btn:focus {
+  background: #FF9900;
+}
+
+/* Container holds everything */
+
+.container {
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2rem 4rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(19, 136, 8, 0.15);
+  z-index: 10;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+/* Header */
+
+.header {
+  user-select: none;
+  margin-bottom: 2.8rem;
+}
+
+.incredible-text {
+  font-family: 'Lora', serif;
+  color: #FF9900;
+  font-weight: 400;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.india-text {
+  font-family: 'Lora', serif;
+  color: #138808;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin: 0 0 1rem 0;
+}
+
+.chakra-decoration {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #000080;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.chakra-decoration::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #000080;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Main form styling */
+
+.form-main {
+  text-align: left;
+}
+
+.login-options {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.digilocker-btn {
+  background: #138808;
+  color: white;
+  border: none;
+  padding: 0.85rem 2.1rem;
+  font-size: 1.15rem;
+  border-radius: 24px;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(31, 111, 38, 0.25);
+  transition: background 0.25s ease;
+  border: 2px solid #0e6b06;
+}
+
+.digilocker-btn:hover,
+.digilocker-btn:focus {
+  background: #0e6b06;
+  box-shadow: 0 6px 26px rgba(20, 80, 12, 0.35);
+}
+
+/* KYC Form Container */
+
+.kyc-form-container h2 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #276e36;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1b5619;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group input[type="file"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1.8px solid #138808;
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+  transition: border 0.25s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="file"]:focus,
+.form-group input[type="password"]:focus {
+  border-color: #FF9900;
+  outline: none;
+}
+
+.submit-group {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.submit-btn {
+  background: #FF9900;
+  color: #fff;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 0.85rem 3rem;
+  border: none;
+  border-radius: 34px;
+  cursor: pointer;
+  box-shadow: 0 6px 26px rgba(255, 153, 0, 0.33);
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background: #e07b00;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem 1.3rem 3rem 1.3rem;
+  }
+  .incredible-text {
+    font-size: 1.8rem;
+  }
+  .india-text {
+    font-size: 2.4rem;
+  }
+  .digilocker-btn,
+  .submit-btn {
+    font-size: 1.05rem;
+    padding: 0.75rem 1.8rem;
+  }
+}
