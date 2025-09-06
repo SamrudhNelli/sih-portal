@@ -26,3 +26,8 @@ locations.each do |loc|
     location.longitude = loc[:longitude]
   end
 end
+
+User.find_or_create_by(email: "admin@test.com") do |user|
+  user.password = "iamadmin"
+  user.admin = true
+end
